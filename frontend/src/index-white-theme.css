@@ -8,102 +8,102 @@
 }
 
 :root {
-  /* Default theme */
-  --theme-loader: #ffffff;
-  --theme-bg-primary: #00182D;
-  --theme-bg-secondary: #002A47;
-  --theme-bg-sidebar: #00182D;
-  --theme-bg-container: #00182D;
-  --theme-bg-chat: #002A47;
-  --theme-bg-chat-input: #003A5C;
-  --theme-text-primary: #ffffff;
-  --theme-text-secondary: rgba(255, 255, 255, 0.6);
-  --theme-placeholder: #57585a;
-  --theme-sidebar-item-default: rgba(255, 255, 255, 0.1);
-  --theme-sidebar-item-selected: rgba(255, 255, 255, 0.3);
-  --theme-sidebar-item-hover: #3f3f42;
-  --theme-sidebar-subitem-default: rgba(255, 255, 255, 0.05);
-  --theme-sidebar-subitem-selected: rgba(255, 255, 255, 0.05);
-  --theme-sidebar-thread-selected: rgba(255, 255, 255, 0.05);
-  --theme-popup-menu-bg: #000000;
+  /* Default theme - White Theme */
+  --theme-loader: #000000;
+  --theme-bg-primary: #ffffff;
+  --theme-bg-secondary: #f8fafc;
+  --theme-bg-sidebar: #f1f5f9;
+  --theme-bg-container: #ffffff;
+  --theme-bg-chat: #ffffff;
+  --theme-bg-chat-input: #f8fafc;
+  --theme-text-primary: #1e293b;
+  --theme-text-secondary: rgba(30, 41, 59, 0.7);
+  --theme-placeholder: #94a3b8;
+  --theme-sidebar-item-default: #ffffff;
+  --theme-sidebar-item-selected: #e2e8f0;
+  --theme-sidebar-item-hover: #f1f5f9;
+  --theme-sidebar-subitem-default: #ffffff;
+  --theme-sidebar-subitem-selected: #e2e8f0;
+  --theme-sidebar-thread-selected: #e2e8f0;
+  --theme-popup-menu-bg: #ffffff;
 
-  --theme-sidebar-subitem-hover: rgba(255, 255, 255, 0.05);
-  --theme-sidebar-border: rgba(255, 255, 255, 0.1);
-  --theme-sidebar-item-workspace-active: #ffffff;
-  --theme-sidebar-item-workspace-inactive: #ffffff;
+  --theme-sidebar-subitem-hover: #e2e8f0;
+  --theme-sidebar-border: #e2e8f0;
+  --theme-sidebar-item-workspace-active: #1e293b;
+  --theme-sidebar-item-workspace-inactive: #1e293b;
 
-  --theme-sidebar-footer-icon: rgba(255, 255, 255, 0.1);
-  --theme-sidebar-footer-icon-fill: #ffffff;
-  --theme-sidebar-footer-icon-hover: rgba(255, 255, 255, 0.2);
+  --theme-sidebar-footer-icon: #64748b;
+  --theme-sidebar-footer-icon-fill: #1e293b;
+  --theme-sidebar-footer-icon-hover: #1e293b;
 
-  --theme-chat-input-border: #4A90A4;
-  --theme-action-menu-bg: #003A5C;
-  --theme-action-menu-item-hover: rgba(255, 255, 255, 0.1);
-  --theme-settings-input-bg: #00182D;
-  --theme-settings-input-placeholder: rgba(255, 255, 255, 0.5);
-  --theme-settings-input-active: rgb(255 255 255 / 0.2);
-  --theme-settings-input-text: #ffffff;
-  --theme-modal-border: #4A90A4;
+  --theme-chat-input-border: #d1d5db;
+  --theme-action-menu-bg: #f8fafc;
+  --theme-action-menu-item-hover: rgba(0, 0, 0, 0.05);
+  --theme-settings-input-bg: #f8fafc;
+  --theme-settings-input-placeholder: rgba(30, 41, 59, 0.5);
+  --theme-settings-input-active: rgb(0 0 0 / 0.1);
+  --theme-settings-input-text: #1e293b;
+  --theme-modal-border: #e2e8f0;
 
-  --theme-button-primary: #46c8ff;
-  --theme-button-primary-hover: #434343;
+  --theme-button-primary: #3b82f6;
+  --theme-button-primary-hover: #2563eb;
 
-  --theme-button-cta: #7cd4fd;
+  --theme-button-cta: #3b82f6;
 
-  --theme-file-row-even: #00182D;
-  --theme-file-row-odd: #002A47;
-  --theme-file-row-selected-even: rgba(74, 144, 164, 0.3);
-  --theme-file-row-selected-odd: rgba(74, 144, 164, 0.2);
-  --theme-file-picker-hover: rgb(74 144 164 / 0.2);
+  --theme-file-row-even: #ffffff;
+  --theme-file-row-odd: #f8fafc;
+  --theme-file-row-selected-even: rgba(59, 130, 246, 0.1);
+  --theme-file-row-selected-odd: rgba(59, 130, 246, 0.05);
+  --theme-file-picker-hover: rgb(59 130 246 / 0.1);
 
-  --theme-home-text: #ffffff;
-  --theme-home-text-secondary: #9f9fa0;
-  --theme-home-bg-card: #002A47;
-  --theme-home-bg-button: #003A5C;
-  --theme-home-border: rgba(74, 144, 164, 0.3);
-  --theme-home-button-primary: #4DD0E1;
-  --theme-home-button-primary-hover: rgba(77, 208, 225, 0.9);
-  --theme-home-button-secondary: #003A5C;
-  --theme-home-button-secondary-hover: rgba(77, 208, 225, 0.1);
-  --theme-home-button-secondary-text: #ffffff;
-  --theme-home-button-secondary-hover-text: #4DD0E1;
-  --theme-home-update-card-bg: #002A47;
-  --theme-home-update-card-hover: #003A5C;
-  --theme-home-update-source: #4DD0E1;
+  --theme-home-text: #1e293b;
+  --theme-home-text-secondary: #64748b;
+  --theme-home-bg-card: #f8fafc;
+  --theme-home-bg-button: #f1f5f9;
+  --theme-home-border: rgba(0, 0, 0, 0.1);
+  --theme-home-button-primary: #3b82f6;
+  --theme-home-button-primary-hover: rgba(59, 130, 246, 0.9);
+  --theme-home-button-secondary: #f1f5f9;
+  --theme-home-button-secondary-hover: rgba(59, 130, 246, 0.1);
+  --theme-home-button-secondary-text: #1e293b;
+  --theme-home-button-secondary-hover-text: #3b82f6;
+  --theme-home-update-card-bg: #f8fafc;
+  --theme-home-update-card-hover: #f1f5f9;
+  --theme-home-update-source: #3b82f6;
 
-  --theme-checklist-item-bg: #203c48;
-  --theme-checklist-item-bg-hover: #255d75;
-  --theme-checklist-item-text: #b9e6fe;
-  --theme-checklist-item-completed-bg: #36463d;
-  --theme-checklist-item-completed-text: #a6f4c5;
-  --theme-checklist-checkbox-fill: #a6f4c5;
-  --theme-checklist-checkbox-text: #36463d;
-  --theme-checklist-item-hover: #36bffa;
-  --theme-checklist-checkbox-border: #ffffff;
-  --theme-checklist-button-border: #36bffa;
-  --theme-checklist-button-text: #36bffa;
-  --theme-checklist-button-hover-bg: rgba(54, 191, 250, 0.2);
-  --theme-checklist-button-hover-border: rgba(54, 191, 250, 0.8);
+  --theme-checklist-item-bg: #e0f2fe;
+  --theme-checklist-item-bg-hover: #bae6fd;
+  --theme-checklist-item-text: #0c4a6e;
+  --theme-checklist-item-completed-bg: #dcfce7;
+  --theme-checklist-item-completed-text: #166534;
+  --theme-checklist-checkbox-fill: #22c55e;
+  --theme-checklist-checkbox-text: #ffffff;
+  --theme-checklist-item-hover: #3b82f6;
+  --theme-checklist-checkbox-border: #6b7280;
+  --theme-checklist-button-border: #3b82f6;
+  --theme-checklist-button-text: #3b82f6;
+  --theme-checklist-button-hover-bg: rgba(59, 130, 246, 0.1);
+  --theme-checklist-button-hover-border: rgba(59, 130, 246, 0.8);
 
-  --theme-home-button-secondary-border: #acc1e6;
-  --theme-home-button-secondary-border-hover: #293056;
+  --theme-home-button-secondary-border: #d1d5db;
+  --theme-home-button-secondary-border-hover: #3b82f6;
 
-  --theme-attachment-bg: #18191a;
-  --theme-attachment-error-bg: rgba(180, 35, 24, 0.4);
-  --theme-attachment-success-bg: #18191a;
-  --theme-attachment-text: #ffffff;
-  --theme-attachment-text-secondary: rgba(255, 255, 255, 0.8);
-  --theme-attachment-icon: #ffffff;
-  --theme-attachment-icon-spinner: #ffffff;
-  --theme-attachment-icon-spinner-bg: #27282a;
+  --theme-attachment-bg: #f8fafc;
+  --theme-attachment-error-bg: rgba(239, 68, 68, 0.1);
+  --theme-attachment-success-bg: #f8fafc;
+  --theme-attachment-text: #1e293b;
+  --theme-attachment-text-secondary: rgba(30, 41, 59, 0.8);
+  --theme-attachment-icon: #64748b;
+  --theme-attachment-icon-spinner: #3b82f6;
+  --theme-attachment-icon-spinner-bg: #ffffff;
 
-  --theme-button-text: #a8a9ab;
-  --theme-button-code-hover-text: #7cd4fd;
-  --theme-button-code-hover-bg: #22343f;
-  --theme-button-disable-hover-text: #fec84b;
-  --theme-button-disable-hover-bg: #3a3128;
-  --theme-button-delete-hover-text: #f97066;
-  --theme-button-delete-hover-bg: #37282b;
+  --theme-button-text: #64748b;
+  --theme-button-code-hover-text: #3b82f6;
+  --theme-button-code-hover-bg: #eff6ff;
+  --theme-button-disable-hover-text: #d97706;
+  --theme-button-disable-hover-bg: #fef3c7;
+  --theme-button-delete-hover-text: #dc2626;
+  --theme-button-delete-hover-bg: #fee2e2;
 }
 
 [data-theme="light"] {
@@ -223,6 +223,60 @@
 
 [data-theme="light"] .border-white\/10 {
   border-color: var(--theme-sidebar-border);
+}
+
+/* Force text visibility in white theme */
+.text-white {
+  color: var(--theme-text-primary) !important;
+}
+
+.text-description,
+.text-white\/60 {
+  color: var(--theme-text-secondary) !important;
+}
+
+/* Ensure sidebar text is visible */
+[class*="sidebar"] .text-white,
+[class*="sidebar"] .text-description {
+  color: var(--theme-text-primary) !important;
+}
+
+/* Fix any remaining white text issues */
+* {
+  color: inherit;
+}
+
+/* Override any hardcoded white text */
+.sidebar-items *,
+.sidebar *,
+[data-testid*="sidebar"] *,
+[class*="sidebar"] *,
+nav *,
+.navigation * {
+  color: var(--theme-text-primary) !important;
+}
+
+/* Ensure all text elements are visible */
+h1, h2, h3, h4, h5, h6, p, span, div, button, a, label, input, textarea {
+  color: inherit;
+}
+
+/* Force dark text on light backgrounds */
+body {
+  color: var(--theme-text-primary);
+}
+
+/* Override Tailwind's text-white class globally */
+.text-white,
+.text-gray-100,
+.text-gray-200 {
+  color: var(--theme-text-primary) !important;
+}
+
+/* Ensure placeholder text is visible */
+::placeholder {
+  color: var(--theme-placeholder) !important;
+  opacity: 1;
 }
 
 /*
@@ -1053,7 +1107,38 @@ does not extend the close button beyond the viewport. */
 }
 
 .rti--container {
-  @apply !bg-theme-settings-input-bg !text-white !placeholder-white !placeholder-opacity-60 !text-sm !rounded-lg !p-2.5;
+  @apply !bg-theme-settings-input-bg !placeholder-opacity-60 !text-sm !rounded-lg !p-2.5;
+  color: var(--theme-text-primary) !important;
+}
+
+/* Additional text visibility fixes */
+.input-label {
+  color: var(--theme-text-primary) !important;
+}
+
+/* Fix any remaining text visibility issues */
+svg text,
+.recharts-text,
+.recharts-text > * {
+  fill: var(--theme-text-primary) !important;
+}
+
+/* Ensure all interactive elements have proper text color */
+button, 
+input, 
+select, 
+textarea,
+.btn,
+[role="button"] {
+  color: inherit;
+}
+
+/* Override any remaining white text in components */
+.text-white,
+.text-gray-100,
+.text-gray-200,
+.text-gray-300 {
+  color: var(--theme-text-primary) !important;
 }
 
 @keyframes fadeUpIn {

@@ -35,62 +35,77 @@ export default function LatestProjects() {
 
     const features = [
         {
-            title: "AI & Document Chat",
-            desc: "Start conversations with intelligent AI agents that can help with various tasks and provide automated assistance.",
+            title: "Using AI Driven Applications to Optimize Agent Productivity",
+            desc: "Build powerful AI Agents and automations with no code.",
             isNew: true,
             onClick: chatWithAgent,
             image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop&crop=center",
             buttonText: "Start Agent Chat"
         },
         {
-            title: "AI Agent",
-            desc: "Design and create custom AI agent workflows using an intuitive drag-and-drop interface for complex automations.",
+            title: "Agent Flow Solution for Global Automation Networks",
+            desc: "Create custom workflows and automations with visual flow builder.",
             isNew: false,
             onClick: buildAgentFlow,
             image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=300&fit=crop&crop=center",
             buttonText: "Build Flow"
         },
-        
-        
         {
-            title: "AI Prompt",
-            desc: "Customize how your AI agents respond by modifying system prompts to match your specific use cases and requirements.",
-            isNew: true,
-            onClick: modifySystemPrompt,
-            image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop&crop=center",
-            buttonText: "Modify Prompt"
-        },
-        {
-            title: "Prompt Manager",
-            desc: "Define and manage dynamic variables that can be used across your AI prompts for consistent and flexible interactions.",
-            isNew: false,
-            onClick: managePromptVariables,
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop&crop=center",
-            buttonText: "Manage Variables"
-        },
-        {
-            title: "Custom Slash Commands",
-            desc: "Create personalized slash commands to quickly execute common tasks and streamline your AI interactions.",
+            title: "A Command Driven Approach to Optimizing Slash Performance",
+            desc: "Save time and inject prompts using custom slash commands.",
             isNew: false,
             onClick: createSlashCommand,
             image: "https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?w=500&h=300&fit=crop&crop=center",
             buttonText: "Create Command"
         },
         {
-            title: "Community Hub Explorer",
-            desc: "Browse and discover community-created AI tools, prompts, and automation templates shared by other users.",
+            title: "Hub Discovery Platform for Community Content",
+            desc: "Discover and share community-created slash commands and prompts.",
             isNew: false,
             onClick: exploreHub,
             image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&h=300&fit=crop&crop=center",
             buttonText: "Explore Hub"
         },
+        {
+            title: "System Prompt Customization for AI Reply Enhancement",
+            desc: "Modify the system prompt to customize the AI replies of a workspace.",
+            isNew: true,
+            onClick: modifySystemPrompt,
+            image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop&crop=center",
+            buttonText: "Modify Prompt"
+        },
+        {
+            title: "Dynamic Variable Management for Prompt Optimization",
+            desc: "Create and manage dynamic variables for your custom prompts.",
+            isNew: false,
+            onClick: managePromptVariables,
+            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop&crop=center",
+            buttonText: "Manage Variables"
+        }
     ];
+
+    const itemsPerPage = 3;
+    const totalSlides = Math.ceil(features.length / itemsPerPage);
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+    };
+
+    const getCurrentFeatures = () => {
+        const startIndex = currentSlide * itemsPerPage;
+        return features.slice(startIndex, startIndex + itemsPerPage);
+    };
 
     return (
         <div className="mt-8 p-8 rounded-lg" style={{ backgroundColor: '#00213A' }}>
             <h2 className="text-white text-xl font-bold mb-6">Explore more features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {features.map((feature, index) => (
+            <div className="relative">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {getCurrentFeatures().map((feature, index) => (
                         <div
                             key={index}
                             className="rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer border border-gray-600"
@@ -107,7 +122,7 @@ export default function LatestProjects() {
                             </div>
                             <div className="p-6">
                                 <div className="flex items-center justify-between mb-3">
-                                    <span className="text-cyan-400 text-sm font-medium">Aditi AI</span>
+                                    <span className="text-cyan-400 text-sm font-medium">Case Study</span>
                                     {feature.isNew && (
                                         <span className="bg-cyan-500 text-white text-xs px-2 py-1 rounded-full">New</span>
                                     )}
@@ -132,6 +147,44 @@ export default function LatestProjects() {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                {/* Navigation Buttons */}
+                {totalSlides > 1 && (
+                    <>
+                        <button
+                            onClick={prevSlide}
+                            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full shadow-lg flex items-center justify-center hover:opacity-80 transition-all duration-200 text-white"
+                            style={{ backgroundColor: '#4DD0E1' }}
+                        >
+                            ←
+                        </button>
+                        <button
+                            onClick={nextSlide}
+                            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full shadow-lg flex items-center justify-center hover:opacity-80 transition-all duration-200 text-white"
+                            style={{ backgroundColor: '#4DD0E1' }}
+                        >
+                            →
+                        </button>
+                    </>
+                )}
+
+                {/* Slide Indicators */}
+                {totalSlides > 1 && (
+                    <div className="flex justify-center mt-6 gap-2">
+                        {Array.from({ length: totalSlides }).map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => setCurrentSlide(index)}
+                                className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentSlide
+                                        ? 'opacity-100'
+                                        : 'opacity-50 hover:opacity-75'
+                                    }`}
+                                style={{ backgroundColor: '#4DD0E1' }}
+                            />
+                        ))}
+                    </div>
+                )}
             </div>
         </div>
     );

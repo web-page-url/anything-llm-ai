@@ -18,6 +18,7 @@ import { LogoProvider } from "./LogoContext";
 import { FullScreenLoader } from "./components/Preloader";
 import { ThemeProvider } from "./ThemeContext";
 import KeyboardShortcutsHelp from "@/components/KeyboardShortcutsHelp";
+import Header from "@/components/Header";
 
 const Main = lazy(() => import("@/pages/Main"));
 const InvitePage = lazy(() => import("@/pages/Invite"));
@@ -98,6 +99,7 @@ export default function App() {
           <LogoProvider>
             <PfpProvider>
               <I18nextProvider i18n={i18n}>
+                <Header />
                 <Routes>
                   <Route path="/" element={<PrivateRoute Component={Main} />} />
                   <Route path="/login" element={<Login />} />
